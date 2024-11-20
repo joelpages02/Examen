@@ -13,6 +13,7 @@ include "../src/controllers/ctrlsongslist.php";
 include "../src/controllers/ctrleditformsong.php";
 include "../src/controllers/ctrlupdatesong.php";
 include "../src/controllers/ctrldeletesong.php";
+include "../src/controllers/ctrlcreditsview.php";
 
 /**
  * Carreguem les classes del Framework Emeset
@@ -55,6 +56,8 @@ if ($r == "") {
   $response = ctrlformsong($request, $response, $container);
 } elseif ($r == "deletesong") {
   $response = ctrldeletesong($request, $response, $container);
+} elseif ($r == "credits") {
+  $response = ctrlcreditsview($request, $response, $container);
 } elseif ($r == "json") {
   $response = ctrlJson($request, $response, $container);
 } 

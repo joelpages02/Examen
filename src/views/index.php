@@ -32,6 +32,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-orange">
             <div class="container-fluid justify-content-start">
                 <a class="navbar-brand text-black" href="?r=formsongs"></i>Añadir Cancion</a>
+                <a class="navbar-brand text-black" href="?r=credits"></i>Credits</a>
                 <!--  <li class="nav-item">
              <a class="nav-link" href="/index.php?r=songs">
                 <i class="bi bi-music-note-list"></i> Songs
