@@ -49,8 +49,8 @@
 
     <!-- Tabla de canciones -->
     <div class="container">
-        <div class="table-responsive rounded column-2 row-2">
-            <table class="table table-striped m-4">
+        <div class="table-responsive mt-4 rounded">
+            <table class="table table-striped">
                 <?php if (!empty($songs)): ?>
                     <?php foreach ($songs as $song): ?>
                         <!-- id_song | song_name | artist | duration | song_path -->
@@ -75,10 +75,48 @@
                                         <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editSongModal-<?= $song['id_song'] ?>">
                                             <i class="bi bi-pencil"></i> Editar
                                         </button>
+                                       
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
+
+                        <!-- Modal de edición -->
+                        <div class="modal fade" id="editSongModal-<?= $song['id_song'] ?>" tabindex="-1" aria-labelledby="editSongModalLabel-<?= $song['id_song'] ?>" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="editSongModalLabel-<?= $song['id_song'] ?>">Editar Canción</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Formulario para editar la canción -->
+                                        <form action="index.php?r=updatesong" id="editSongForm" method="post" enctype="multipart/form-data">
+                                            <input type="text" hidden name="song_id" value="<?= $song['id_song'] ?>">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="song_name" value="<?= $song['song_name'] ?>" class="form-control" id="song_name" placeholder="505">
+                                                <label for="song_name">Nombre de la canción</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="artist" value="<?= $song['artist'] ?>" class="form-control" id="artist" placeholder="Artic Monkeys">
+                                                <label for="artist">Artista</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="file" name="song" accept="audio/*" class="form-control" id="song">
+                                                <label for="song">Seleccionar una nueva canción</label>
+                                                <?php if (!empty($song['song_path'])): ?>
+                                                    <small class="form-text text-muted">
+                                                        Canción actual:
+                                                        <a href="<?= $song['song_path'] ?>" target="_blank"><?= basename($song['song_path']) ?></a>
+                                                    </small>
+                                                <?php endif; ?>
+                                            </div>
+                                            <button class="btn btn-primary mt-3" type="submit">Guardar Cambios</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     <?php endforeach; ?>
                 <?php else: ?>
@@ -90,47 +128,7 @@
                 <?php endif; ?>
             </table>
         </div>
-    <!-- Modal de edición -->
-    <div class="modal fade" id="editSongModal-<?= $song['id_song'] ?>" tabindex="-1" aria-labelledby="editSongModalLabel-<?= $song['id_song'] ?>" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editSongModalLabel-<?= $song['id_song'] ?>">Editar Canción</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Formulario para editar la canción -->
-                    <form action="index.php?r=updatesong" id="editSongForm" method="post" enctype="multipart/form-data">
-                        <input type="text" hidden name="song_id" value="<?= $song['id_song'] ?>">
-                        <div class="form-floating mb-3">
-                            <input type="text" name="song_name" value="<?= $song['song_name'] ?>" class="form-control" id="song_name" placeholder="505">
-                            <label for="song_name">Nombre de la canción</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" name="artist" value="<?= $song['artist'] ?>" class="form-control" id="artist" placeholder="Artic Monkeys">
-                            <label for="artist">Artista</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="file" name="song" accept="audio/*" class="form-control" id="song">
-                            <label for="song">Seleccionar una nueva canción</label>
-                            <?php if (!empty($song['song_path'])): ?>
-                                <small class="form-text text-muted">
-                                    Canción actual:
-                                    <a href="<?= $song['song_path'] ?>" target="_blank"><?= basename($song['song_path']) ?></a>
-                                </small>
-                            <?php endif; ?>
-                        </div>
-                        <button class="btn btn-primary mt-3" type="submit">Guardar Cambios</button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
-    <!-- <form action="/index.php?r=deletesong" method="post" enctype="multipart/form-data" class="m-2">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" hidden name="id_song" class="form-control" id="id_song" value="<?= $song['id_song'] ?>">
-                                                <button class="btn btn-primary mt-3" type="submit">Eliminar</button>
-                                            </div> -->
 
     <!-- Archivos necesarios para Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
