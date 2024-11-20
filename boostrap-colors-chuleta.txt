@@ -1,0 +1,88 @@
+<!-- Cambiar colores de fondo -->
+<div class="bg-primary text-white">Fondo azul con texto blanco</div>
+<div class="bg-secondary text-white">Fondo gris con texto blanco</div>
+<div class="bg-success text-white">Fondo verde con texto blanco</div>
+<div class="bg-danger text-white">Fondo rojo con texto blanco</div>
+<div class="bg-warning text-dark">Fondo amarillo con texto oscuro</div>
+<div class="bg-info text-white">Fondo azul claro con texto blanco</div>
+<div class="bg-light text-dark">Fondo claro con texto oscuro</div>
+<div class="bg-dark text-white">Fondo negro con texto blanco</div>
+
+<!-- Cambiar colores de texto -->
+<p class="text-primary">Texto azul</p>
+<p class="text-secondary">Texto gris</p>
+<p class="text-success">Texto verde</p>
+<p class="text-danger">Texto rojo</p>
+<p class="text-warning">Texto amarillo</p>
+<p class="text-info">Texto azul claro</p>
+<p class="text-light bg-dark">Texto claro sobre fondo oscuro</p>
+<p class="text-dark">Texto oscuro</p>
+<p class="text-white bg-dark">Texto blanco sobre fondo oscuro</p>
+
+<!-- Cambiar el peso de la fuente -->
+<p class="font-weight-bold">Texto en negrita</p>
+<p class="font-italic">Texto en cursiva</p>
+
+<!-- Tabla básica con Bootstrap -->
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Encabezado 1</th>
+            <th scope="col">Encabezado 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fila 1, Col 1</td>
+            <td>Fila 1, Col 2</td>
+        </tr>
+        <tr class="table-primary">
+            <td>Fila 2, Col 1</td>
+            <td>Fila 2, Col 2</td>
+        </tr>
+        <tr class="table-danger">
+            <td>Fila 3, Col 1</td>
+            <td>Fila 3, Col 2</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Tabla con bordes -->
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Encabezado 1</th>
+            <th scope="col">Encabezado 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fila 1, Col 1</td>
+            <td>Fila 1, Col 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2, Col 1</td>
+            <td>Fila 2, Col 2</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Tabla con estilos alternos -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Encabezado 1</th>
+            <th scope="col">Encabezado 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fila 1, Col 1</td>
+            <td>Fila 1, Col 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2, Col 1</td>
+            <td>Fila 2, Col 2</td>
+        </tr>
+    </tbody>
+</table>

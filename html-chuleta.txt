@@ -1,0 +1,65 @@
+<!-- Listas desordenadas -->
+<ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+</ul>
+
+<!-- Listas ordenadas -->
+<ol>
+    <li>Primer elemento</li>
+    <li>Segundo elemento</li>
+    <li>Tercer elemento</li>
+</ol>
+
+<!-- Listas de definición -->
+<dl>
+    <dt>Término 1</dt>
+    <dd>Definición del término 1</dd>
+    <dt>Término 2</dt>
+    <dd>Definición del término 2</dd>
+</dl>
+
+<!-- Formularios -->
+<form action="/submit" method="post">
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    </div>
+    <div>
+        <label for="opcion">Selecciona una opción:</label>
+        <select id="opcion" name="opcion">
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+        </select>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+<!-- Tablas -->
+<table border="1">
+    <thead>
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fila 1, Col 1</td>
+            <td>Fila 1, Col 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2, Col 1</td>
+            <td>Fila 2, Col 2</td>
+        </tr>
+    </tbody>
+</table>

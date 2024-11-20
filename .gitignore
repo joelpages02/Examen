@@ -1,0 +1,5 @@
+public/uploads/*
+docker-compose.yml
+bbdd.sql
+README.md
+LICENSE

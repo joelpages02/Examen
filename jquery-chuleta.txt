@@ -1,0 +1,36 @@
+// Selección de elementos
+$('selector'); // Selecciona elementos
+$('.clase'); // Selecciona elementos por clase
+$('#id'); // Selecciona un elemento por ID
+
+// Manipulación de contenido
+$('#elemento').text('Nuevo texto'); // Cambia el texto
+$('#elemento').html('<strong>Nuevo contenido</strong>'); // Cambia el HTML
+$('#elemento').append('<p>Texto adicional</p>'); // Agrega contenido al final
+
+// Manipulación de atributos
+$('#elemento').attr('src', 'nueva-imagen.jpg'); // Cambia el atributo src
+$('#elemento').removeAttr('disabled'); // Elimina un atributo
+
+// Manejo de eventos
+$('#boton').on('click', function() {
+    alert('Botón clickeado!');
+}); // Evento click
+
+// Efectos
+$('#elemento').hide(); // Oculta el elemento
+$('#elemento').show(); // Muestra el elemento
+$('#elemento').fadeIn(); // Desvanece el elemento al mostrarlo
+$('#elemento').slideUp(); // Desliza hacia arriba para ocultar
+
+// AJAX
+$.ajax({
+    url: 'url/a/tu/api',
+    method: 'GET',
+    success: function(data) {
+        console.log(data); // Maneja la respuesta
+    },
+    error: function(error) {
+        console.error('Error:', error); // Maneja el error
+    }
+});

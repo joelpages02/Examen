@@ -1,0 +1,54 @@
+.audio-player {
+  transition: transform 0.2s ease;
+  min-width: 200px;
+}
+
+audio {
+  height: 35px;
+  border: none;
+  outline: none;
+}
+
+/* Estilo para la barra de progreso */
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-timeline-container {
+  background-color: white !important;
+}
+
+/* Estilo para el panel de controles */
+audio::-webkit-media-controls-panel {
+  background-color: var(--bs-white);
+  border-radius: 0.5rem;
+}
+
+/* Estilo para el botón de play */
+audio::-webkit-media-controls-play-button {
+  background-color: var(--bs-primary);
+  border-radius: 50%;
+}
+
+/* Estilo para el control de volumen */
+audio::-webkit-media-controls-volume-slider {
+  background-color: white;
+  border-radius: 0.25rem;
+}
+
+/* Estilo para los tiempos */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: var(--bs-gray-700);
+  font-family: var(--bs-font-sans-serif);
+}
+
+.bg-orange{
+  background-color: orange !important;
+}
+
+.bg-gray{
+  background-color: lightgray !important;
+}
+
+.font-size-500{
+  font-size: 2.5em;
+  color: black;
+}
